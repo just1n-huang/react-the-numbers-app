@@ -32,6 +32,7 @@ const App = () => {
       const data = Math.ceil(Math.random() * 100);
       const response = await axios.post("/api/items", { data });
       const item = response.data;
+      console.log(item);
       setItems([...items, item]);
     } catch (ex) {
       console.log(ex);
